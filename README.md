@@ -32,9 +32,15 @@ python app.py
 Now,
 
 open up localhost:
+
 Techstack Used:
+
 Python
+
 LangChain
+
 Flask
+
 Groq
+
 Pinecone
