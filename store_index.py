@@ -11,8 +11,8 @@ load_dotenv()
 PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY')
 GROK_API_KEY=os.environ.get('GROK_API_KEY')
 
-os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
-os.environ["GROK_API_KEY"] = GROK_API_KEY
+os.environ['PINECONE_API_KEY'] = PINECONE_API_KEY
+os.environ['GROK_API_KEY'] = GROK_API_KEY
 
 
 extracted_data=load_pdf_file(data='data/')
@@ -26,7 +26,7 @@ pc = Pinecone(api_key=pinecone_api_key)
 
 
 
-index_name = "medical-chatbot"  # change if desired
+index_name = "medical-chatbot"  
 
 if not pc.has_index(index_name):
     pc.create_index(

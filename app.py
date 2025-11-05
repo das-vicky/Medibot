@@ -19,7 +19,7 @@ PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY')
 GROK_API_KEY=os.environ.get('GROK_API_KEY')
 
 os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
-os.environ["GROK_API_KEY"] = GROK_API_KEY
+os.environ["GROK_API_KEY"] = GROK_API_KEY 
 
 
 embeddings = download_hugging_face_embeddings()
@@ -41,7 +41,7 @@ from langchain_groq import ChatGroq
 
 chatModel = ChatGroq(
     model="meta-llama/llama-4-scout-17b-16e-instruct",
-    api_key="GROK_API_KEY" 
+    api_key= GROK_API_KEY 
 )
 prompt = ChatPromptTemplate.from_messages(
     [
